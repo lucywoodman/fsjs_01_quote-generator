@@ -3,14 +3,14 @@
 
 An app that displays random famous quotes each time a button is clicked.
 
-## Getting started
-
-Clone or download the repo, then open index.html in the browser.
-
 ## Features
 
 * Random quotes
 * That's about it!
+
+## Todos
+
+* Add fetch API for quotes
 
 ## Links
 
