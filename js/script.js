@@ -9,10 +9,10 @@ project 1 - A Random Quote Generator
 
 // variable setup
 
-const quote = document.querySelector('.quote');
-const source = document.querySelector('.source');
-const citation = document.querySelector('.citation');
-const year = document.querySelector('.year');
+const quoteContent = document.querySelector('.quote');
+const sourceContent = document.querySelector('.source');
+const citationContent = document.querySelector('.citation');
+const yearContent = document.querySelector('.year');
 
 /*** 
  * `quotes` array 
@@ -59,7 +59,7 @@ const quotes = [
 /**
  * Calculates a random number and uses it to get an object from the quotes array.
  *
- * @returns {array} Random quote from quotes array.
+ * @returns {object} Random quote from quotes array.
  */
 
 const getRandomQuote = () => {
@@ -68,15 +68,30 @@ const getRandomQuote = () => {
   const randomNumber = Math.floor( Math.random() * quotes.length );
   
   // get random quote from quotes array
-  return Object.values(quotes[randomNumber]);
-}
+  return quotes[randomNumber];
+};
 
 /***
  * `printQuote` function
 ***/
 
+/**
+ * Prints output from getRandomQuote() to the browser.
+ *
+ */
+
 const printQuote = () => {
-}
+  const randomQuote = getRandomQuote();
+  const quote = randomQuote.quote;
+  const source = randomQuote.source;
+  const citation = randomQuote.citation;
+  const year = randomQuote.year;
+
+  quoteContent.innerHTML = quote;
+  sourceContent.innerHTML = source;
+  citationContent.innerHTML = citation;
+  year.innerHTML = year;
+};
 
 /***
  * click event listener for the print quote button
