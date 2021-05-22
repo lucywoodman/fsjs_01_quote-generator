@@ -7,13 +7,6 @@ project 1 - A Random Quote Generator
   // Check the "Project Resources" section of the project instructions
   // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
 
-// variable setup
-
-const quoteContent = document.querySelector('.quote');
-const sourceContent = document.querySelector('.source');
-const citationContent = document.querySelector('.citation');
-const yearContent = document.querySelector('.year');
-
 /*** 
  * `quotes` array 
 ***/
@@ -81,16 +74,32 @@ const getRandomQuote = () => {
  */
 
 const printQuote = () => {
+  // save output of getRandomQuote to a variable
   const randomQuote = getRandomQuote();
-  const quote = randomQuote.quote;
-  const source = randomQuote.source;
-  const citation = randomQuote.citation;
-  const year = randomQuote.year;
 
-  quoteContent.innerHTML = quote;
-  sourceContent.innerHTML = source;
-  citationContent.innerHTML = citation;
-  year.innerHTML = year;
+  // create HTML for the quote
+  let html = `
+    <p class="quote">${randomQuote.quote}</p>
+    <p class="source">${randomQuote.source}
+  `;
+
+  // check if the citation exists and add to HTML
+  if ( randomQuote.citation) {
+    html = html + `
+      <span class="citation">${randomQuote.citation}</span>
+    `;
+  }
+  // check if the year exists and add to HTML
+  if (randomQuote.year) {
+    html = html + `
+      <span class="year">${randomQuote.year}</span>
+    `;
+  }
+  // close HTML paragraph
+  html = html + `</p>`;
+
+  // add HTML to the page
+  document.getElementById('quote-box').innerHTML = html;
 };
 
 /***
