@@ -7,6 +7,13 @@ project 1 - A Random Quote Generator
   // Check the "Project Resources" section of the project instructions
   // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
 
+// variable setup
+
+const quote = document.querySelector('.quote');
+const source = document.querySelector('.source');
+const citation = document.querySelector('.citation');
+const year = document.querySelector('.year');
+
 /*** 
  * `quotes` array 
 ***/
@@ -49,17 +56,26 @@ const quotes = [
  * `getRandomQuote` function
 ***/
 
+/**
+ * Calculates a random number and uses it to get an object from the quotes array.
+ *
+ * @returns {array} Random quote from quotes array.
+ */
+
 const getRandomQuote = () => {
+  
+  // get random index value
   const randomNumber = Math.floor( Math.random() * quotes.length );
-  return quotes[randomNumber];
+  
+  // get random quote from quotes array
+  return Object.values(quotes[randomNumber]);
 }
 
 /***
  * `printQuote` function
 ***/
 
-function printQuote() {
-  
+const printQuote = () => {
 }
 
 /***
