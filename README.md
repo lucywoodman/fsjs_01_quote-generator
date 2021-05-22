@@ -17,9 +17,6 @@ Clone or download the repo, then open index.html in the browser.
 - Project homepage: https://lucywoodman.github.io/random-quote-generator/
 - Repository: https://github.com/lucywoodman/random-quote-generator
 - Issue tracker: https://github.com/lucywoodman/random-quote-generator/issues
-  - In case of sensitive bugs like security vulnerabilities, please contact
-    my@email.com directly instead of using issue tracker. We value your effort
-    to improve the security and privacy of this project!
 
 ## Licensing
 
