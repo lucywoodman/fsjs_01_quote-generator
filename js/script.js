@@ -49,13 +49,18 @@ const quotes = [
  * `getRandomQuote` function
 ***/
 
-
+const getRandomQuote = () => {
+  const randomNumber = Math.floor( Math.random() * quotes.length );
+  return quotes[randomNumber];
+}
 
 /***
  * `printQuote` function
 ***/
 
-
+function printQuote() {
+  
+}
 
 /***
  * click event listener for the print quote button
