@@ -60,6 +60,13 @@ h1 {
   line-height: 0.5;
 }
 
+.intro {
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  margin-left: 10px;
+}
+
 .quote {
   font-size: 2rem;
   font-weight: 400;

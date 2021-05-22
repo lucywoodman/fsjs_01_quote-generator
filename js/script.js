@@ -100,6 +100,9 @@ const printQuote = () => {
 
   // add HTML to the page
   document.getElementById('quote-box').innerHTML = html;
+
+  // update button text
+  document.getElementById('load-quote').innerHTML = `Show another quote`;
 };
 
 /***
