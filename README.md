@@ -14,9 +14,9 @@ An app that displays random famous quotes each time a button is clicked.
 
 ## Links
 
-- Project homepage: https://lucywoodman.github.io/random-quote-generator/
-- Repository: https://github.com/lucywoodman/random-quote-generator
-- Issue tracker: https://github.com/lucywoodman/random-quote-generator/issues
+- Project homepage: https://lwoodman-old.github.io/random-quote-generator/
+- Repository: https://github.com/lwoodman-old/random-quote-generator
+- Issue tracker: https://github.com/lwoodman-old/random-quote-generator/issues
 
 ## Licensing
 
