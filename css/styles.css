@@ -3,68 +3,106 @@
  * Random Quote Generator - CSS
  */
 
-@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url(https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap);
+
+html,
+body {
+  height: 100%;
+}
 
 body {
   background-color: rgb(58, 105, 193);
   color: white;
   font-family: "PT Serif", serif;
   padding: 5px;
+  display: flex;
+  flex-direction: column;
 }
 
-header {
+header,
+footer {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
   width: 95%;
   max-width: 1100px;
   margin: auto;
   padding: 5px;
 }
 
-/* h1 {
-  text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.3);
-} */
+footer {
+  flex-shrink: 0;
+  margin-bottom: 50px;
+}
 
-.load-quote {
+.load-quote,
+.autoplay {
   color: #fff;
-  text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.3);
   width: 12em;
   max-height: 75px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 5px;
   padding: 15px 0;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   border: 2px solid rgba(0, 0, 0, 0.3);
   transition: 0.5s;
+  font-size: 1.5rem;
+  line-height: 1.1;
 }
 
-.load-quote:hover {
+.load-quote:hover,
+.autoplay:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.load-quote:focus {
+.load-quote:focus,
+.autoplay:focus {
   outline: none;
+}
+
+.autoplay::after {
+  content: url(../img/play.svg);
+  margin-left: 5px;
 }
 
 .container {
   width: 90%;
   max-width: 1024px;
   margin: auto;
-  /* padding: 5px; */
+  display: flex;
+  justify-content: center;
+  flex: 1 0 auto;
+}
+
+.welcome {
+  font-size: 1.5em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.bounce {
+  margin: 2em 0 0 0;
+  zoom: 130%;
+  animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
 }
 
 .quote-box {
-  /* text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.3); */
   line-height: 0.5;
-}
-
-.intro {
-  font-size: 1.5rem;
-  letter-spacing: 0.05em;
-  line-height: 1.1;
-  margin: 0 0 12px 0;
 }
 
 .quote {
@@ -72,8 +110,7 @@ header {
   font-weight: 400;
   line-height: 1.2;
   position: relative;
-  margin: 0;
-  margin-left: 10px;
+  margin: 0 0 0 10px;
 }
 
 .quote:before,
@@ -169,13 +206,5 @@ header {
 
   .source {
     font-size: 1.25rem;
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  .unhidden {
-    display: inline-block;
   }
 }

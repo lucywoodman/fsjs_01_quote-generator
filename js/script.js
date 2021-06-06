@@ -78,8 +78,7 @@ const printQuote = () => {
   html = html + `</p>`;
 
   document.getElementById('quote-box').innerHTML = html;
-  document.getElementById('load-quote').className = 'load-quote unhidden';
+  document.getElementById('load-quote').innerHTML = 'Show another quote';
 };
 
-document.getElementById('start-quote').addEventListener("click", printQuote, false);
 document.getElementById('load-quote').addEventListener("click", printQuote, false);

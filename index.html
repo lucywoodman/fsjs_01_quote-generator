@@ -3,23 +3,31 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Quotes</title>
+    <title>Positive Quotes</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
 
   <body>
     <header>
-      <h1>Random Quotes</h1>
-      <button id="load-quote" class="load-quote hidden">Show another quote</button>
+      <h1>Positive Quotes</h1>
     </header>
 
     <div class="container">
       <div id="quote-box" class="quote-box">
-        <button id="start-quote" class="load-quote intro">Show a quote</button>
-        <!-- <p class="intro">Click the button above to display a random quote!</p> -->
+        <div class="welcome">
+          <p>Click a button below to start!</p>
+          <p class="bounce"><img src="./img/arrow-down.svg" /></p>
+          </svg>
+          </p>
+        </div>
       </div>
     </div>
+
+    <footer>
+      <button id="load-quote" class="load-quote">Show a quote</button>
+      <button id="autoplay" class="autoplay">Autoplay</button>
+    </footer>
     
     <script src="js/script.js"></script>
   </body>
