@@ -50,6 +50,15 @@ const getRandomQuote = () => {
 };
 
 /**
+ * Updates --base-color to a random hue.
+ *
+ */
+ const changeColors = () => {
+  const hue = Math.floor(Math.random() * 360);
+  document.body.style.setProperty('--base-color', hue);
+}
+
+/**
  * Concatenates and prints output from getRandomQuote() 
  */
 
@@ -83,18 +92,14 @@ const printQuote = () => {
   html = html + `</p>`;
 
   quoteBox.innerHTML = html;
+  changeColors();
 };
-
-const changeColors = () => {
-  const hue = Math.floor(Math.random() * 360);
-  document.body.style.setProperty('--base-color', hue);
-}
 
 // Event listeners
 quoteButton.addEventListener("click", printQuote, false);
+
 const play = () => {
   setInterval(printQuote, 5000);
-  setInterval(changeColors, 5000);
   playButton.style.display = 'none';
   stopButton.style.display = 'inline-block';
 }
