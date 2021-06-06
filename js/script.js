@@ -5,10 +5,10 @@ project 1 - A Random Quote Generator
 
 const quotes = [
   {
-      quote: `We are what we repeatedly do. Excellence, then, is not an act, but a habit.`,
-      source: `Will Durant on Aristotle`,
-      citation: `The Story of Philosophy`,
-      year: 1926
+    quote: `We are what we repeatedly do. Excellence, then, is not an act, but a habit.`,
+    source: `Will Durant on Aristotle`,
+    citation: `The Story of Philosophy`,
+    year: 1926
   },
   {
     quote: `I am the master of my fate, I am the captain of my soul.`,
@@ -78,7 +78,8 @@ const printQuote = () => {
   html = html + `</p>`;
 
   document.getElementById('quote-box').innerHTML = html;
-  document.getElementById('load-quote').innerHTML = `Show another quote`;
+  document.getElementById('load-quote').className = 'load-quote unhidden';
 };
 
+document.getElementById('start-quote').addEventListener("click", printQuote, false);
 document.getElementById('load-quote').addEventListener("click", printQuote, false);

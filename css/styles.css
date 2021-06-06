@@ -170,4 +170,12 @@ header {
   .source {
     font-size: 1.25rem;
   }
+
+  .hidden {
+    display: none;
+  }
+
+  .unhidden {
+    display: inline-block;
+  }
 }
