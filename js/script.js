@@ -3,12 +3,17 @@ Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
 
+const quoteButton = document.getElementById('load-quote');
+const autoplayButton = document.getElementById('autoplay');
+const quoteBox = document.getElementById('quote-box');
+
 const quotes = [
   {
     quote: `We are what we repeatedly do. Excellence, then, is not an act, but a habit.`,
     source: `Will Durant on Aristotle`,
     citation: `The Story of Philosophy`,
-    year: 1926
+    year: 1926,
+    tags: `productivity`
   },
   {
     quote: `I am the master of my fate, I am the captain of my soul.`,
@@ -33,23 +38,18 @@ const quotes = [
 ];
 
 /**
- * Calculates a random number and uses it to get an object from the quotes array.
+ * Returns random quote from the quotes array.
  *
- * @returns {object} Random quote from quotes array.
+ * @return {object} random quote from quotes array.
  */
 
 const getRandomQuote = () => {
-  
-  // get random index value
   const randomNumber = Math.floor( Math.random() * quotes.length );
-  
-  // get random quote from quotes array
   return quotes[randomNumber];
 };
 
 /**
- * Prints output from getRandomQuote() to the browser.
- *
+ * Concatenates and prints output from getRandomQuote() 
  */
 
 const printQuote = () => {
@@ -71,9 +71,41 @@ const printQuote = () => {
       <span class="year">${randomQuote.year}</span>
     `;
   }
+
+  if ( randomQuote.tags ) {
+    html = html + `
+      </p>
+      <p class="tags">${randomQuote.tags}
+    `;
+  }
+
   html = html + `</p>`;
 
-  document.getElementById('quote-box').innerHTML = html;
+  quoteBox.innerHTML = html;
 };
 
-document.getElementById('load-quote').addEventListener("click", printQuote, false);
+const changeColors = () => {
+  const hue = Math.floor(Math.random() * 360);
+  const bgColor = `hsl(${hue}, 100%, 80%)`;
+  const textColor = `hsl(${hue}, 100%, 25%)`;
+  document.body.style.backgroundColor = bgColor;
+  document.body.style.color = textColor;
+  quoteButton.style.color = textColor;
+  autoplayButton.style.color = textColor;
+  quoteButton.style.borderColor = textColor;
+  autoplayButton.style.borderColor = textColor;
+}
+
+const startInterval = () => {
+  setInterval(printQuote, 5000);
+  setInterval(changeColors, 5000);
+  autoplayButton.innerHTML = `Stop autoplay`;
+}
+
+const stopInterval = () => {
+  clearInterval();
+}
+
+// Event listeners
+quoteButton.addEventListener("click", printQuote, false);
+autoplayButton.addEventListener("click", startInterval, false);

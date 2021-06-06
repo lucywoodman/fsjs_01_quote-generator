@@ -131,6 +131,16 @@ footer {
   font-style: normal;
 }
 
+.tags {
+  text-align: right;
+  margin-right: 5em;
+  opacity: 0.8;
+}
+
+.tags::before {
+  content: "tags: ";
+}
+
 @media (min-width: 768px) {
   body {
     padding: 25px;
