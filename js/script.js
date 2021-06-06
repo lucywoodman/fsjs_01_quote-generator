@@ -98,14 +98,13 @@ const printQuote = () => {
 // Event listeners
 quoteButton.addEventListener("click", printQuote, false);
 
-const play = () => {
-  setInterval(printQuote, 5000);
+playButton.onclick = () => {
+  let interval = setInterval(printQuote, 5000);
   playButton.style.display = 'none';
   stopButton.style.display = 'inline-block';
-}
-
-const stop = () => {
-  clearInterval(play);
-  playButton.style.display = 'inline-block';
-  stopButton.style.display = 'none';
+  stopButton.onclick = () => {
+    clearInterval(interval);
+    playButton.style.display = 'inline-block';
+    stopButton.style.display = 'none';
+  }
 }
