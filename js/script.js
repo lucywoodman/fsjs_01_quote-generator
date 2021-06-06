@@ -4,7 +4,8 @@ project 1 - A Random Quote Generator
 ******************************************/
 
 const quoteButton = document.getElementById('load-quote');
-const autoplayButton = document.getElementById('autoplay');
+const playButton = document.querySelector('.play');
+const stopButton = document.querySelector('.stop');
 const quoteBox = document.getElementById('quote-box');
 
 const quotes = [
@@ -89,18 +90,17 @@ const changeColors = () => {
   document.body.style.setProperty('--base-color', hue);
 }
 
-const startInterval = () => {
-  setInterval(printQuote, 5000);
-  setInterval(changeColors, 5000);
-  autoplayButton.innerHTML = `
-  Stop autoplay <svg width="24" height="24" fill="none" viewBox="0 0 24 16"><rect width="12.5" height="12.5" x="5.75" y="5.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" rx="1"></rect></svg>
-  `;
-}
-
-const stopInterval = () => {
-  clearInterval();
-}
-
 // Event listeners
 quoteButton.addEventListener("click", printQuote, false);
-autoplayButton.addEventListener("click", startInterval, false);
+const play = () => {
+  setInterval(printQuote, 5000);
+  setInterval(changeColors, 5000);
+  playButton.style.display = 'none';
+  stopButton.style.display = 'inline-block';
+}
+
+const stop = () => {
+  clearInterval(play);
+  playButton.style.display = 'inline-block';
+  stopButton.style.display = 'none';
+}

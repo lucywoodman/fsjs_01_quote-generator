@@ -40,7 +40,8 @@ footer {
 }
 
 .load-quote,
-.autoplay {
+.play,
+.stop {
   color: var(--text-color);
   width: auto;
   max-height: 75px;
@@ -54,13 +55,19 @@ footer {
   line-height: 1.1;
 }
 
+.stop {
+  display: none;
+}
+
 .load-quote:hover,
-.autoplay:hover {
+.play:hover,
+.stop:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
 .load-quote:focus,
-.autoplay:focus {
+.play:focus,
+stop:focus {
   outline: none;
 }
 
