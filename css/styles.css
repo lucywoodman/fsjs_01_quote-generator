@@ -6,7 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 body {
-  background-color: rgb(58, 193, 98);
+  background-color: rgb(58, 105, 193);
   color: white;
   font-family: "PT Serif", serif;
   padding: 5px;
@@ -22,9 +22,9 @@ header {
   padding: 5px;
 }
 
-h1 {
+/* h1 {
   text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.3);
-}
+} */
 
 .load-quote {
   color: #fff;
@@ -52,11 +52,11 @@ h1 {
   width: 90%;
   max-width: 1024px;
   margin: auto;
-  padding: 5px;
+  /* padding: 5px; */
 }
 
 .quote-box {
-  text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.3);
+  /* text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.3); */
   line-height: 0.5;
 }
 
@@ -64,7 +64,7 @@ h1 {
   font-size: 1.5rem;
   letter-spacing: 0.05em;
   line-height: 1.1;
-  margin: 0 10px 12px 10px;
+  margin: 0 0 12px 0;
 }
 
 .quote {
@@ -136,7 +136,7 @@ h1 {
     height: 73px;
     margin-top: 20px;
     margin-right: 5px;
-    border-bottom: 4px solid rgba(0, 0, 0, 0.3);
+    /* border-bottom: 4px solid rgba(0, 0, 0, 0.3); */
   }
 
   .load-quote {
@@ -144,10 +144,10 @@ h1 {
   }
 
   .container {
-    padding: 25px 25px 15px 55px;
-    background: rgba(0, 0, 0, 0.1);
-    border-left: 5px solid rgba(0, 0, 0, 0.3);
-    border-radius: 0 4px 4px 0;
+    padding: 25px 25px 15px 25px;
+    /* background: rgba(0, 0, 0, 0.1); */
+    /* border-left: 5px solid rgba(0, 0, 0, 0.3); */
+    /* border-radius: 0 4px 4px 0; */
   }
 
   .quote {
