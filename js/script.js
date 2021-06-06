@@ -1,8 +1,3 @@
-/******************************************
-Treehouse FSJS Techdegree:
-project 1 - A Random Quote Generator
-******************************************/
-
 const quoteButton = document.getElementById('load-quote');
 const playButton = document.querySelector('.play');
 const stopButton = document.querySelector('.stop');

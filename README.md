@@ -9,9 +9,9 @@ An app that displays random quotes.
 
 ## Links
 
-- Project homepage: https://lwoodman-old.github.io/fsjs_01_quote-generator/
-- Repository: https://github.com/lwoodman-old/fsjs_01_quote-generator
-- Issue tracker: https://github.com/lwoodman-old/fsjs_01_quote-generator/issues
+- Project homepage: https://lucywoodman.github.io/fsjs_01_quote-generator/
+- Repository: https://github.com/lucywoodman/fsjs_01_quote-generator
+- Issue tracker: https://github.com/lucywoodman/fsjs_01_quote-generator/issues
 
 ## Licensing
 
