@@ -1,13 +1,11 @@
-# Random Quote Generator
+# The Quote Generator
 
-> A Treehouse FSJS Project
-
-An app that displays random famous quotes each time a button is clicked.
+An app that displays random quotes.
 
 ## Features
 
-- Random quotes
-- That's about it!
+- Display fresh random quotes at the click of a button.
+- Or let the app autoplay through them.
 
 ## Links
 
