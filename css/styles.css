@@ -3,27 +3,22 @@
  * Random Quote Generator - CSS
  */
 
+@import "normalize.css";
 @import url(https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap);
 
-html,
 body {
-  height: 100vh;
-  margin: 0;
+  min-height: calc(100vh - 50px);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  font-family: "PT Serif", serif;
+  transition: 1.5s;
   --base-color: 170;
   --main-bg-color: hsla(var(--base-color), 100%, 80%, 1);
   --dark-bg-color: hsla(var(--base-color), 90%, 30%, 0.2);
   --text-color: hsla(var(--base-color), 100%, 25%, 1);
   --border-color: hsla(var(--base-color), 100%, 25%, 0.3);
-}
-
-body {
-  background-color: var(--main-bg-color);
-  color: var(--text-color);
-  font-family: "PT Serif", serif;
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  transition: 1.5s;
 }
 
 header,
@@ -37,8 +32,7 @@ footer {
 }
 
 footer {
-  flex-shrink: 0;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 .load-quote,
@@ -79,7 +73,6 @@ stop:focus {
   margin: auto;
   display: flex;
   justify-content: center;
-  flex: 1 0 auto;
 }
 
 .quote-box {
