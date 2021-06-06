@@ -86,20 +86,15 @@ const printQuote = () => {
 
 const changeColors = () => {
   const hue = Math.floor(Math.random() * 360);
-  const bgColor = `hsl(${hue}, 100%, 80%)`;
-  const textColor = `hsl(${hue}, 100%, 25%)`;
-  document.body.style.backgroundColor = bgColor;
-  document.body.style.color = textColor;
-  quoteButton.style.color = textColor;
-  autoplayButton.style.color = textColor;
-  quoteButton.style.borderColor = textColor;
-  autoplayButton.style.borderColor = textColor;
+  document.body.style.setProperty('--base-color', hue);
 }
 
 const startInterval = () => {
   setInterval(printQuote, 5000);
   setInterval(changeColors, 5000);
-  autoplayButton.innerHTML = `Stop autoplay`;
+  autoplayButton.innerHTML = `
+  Stop autoplay <svg width="24" height="24" fill="none" viewBox="0 0 24 16"><rect width="12.5" height="12.5" x="5.75" y="5.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" rx="1"></rect></svg>
+  `;
 }
 
 const stopInterval = () => {
